@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sbert:
+    container_name: 'SBERT-TEST'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/app
+    tty: true
+    stdin_open: true
